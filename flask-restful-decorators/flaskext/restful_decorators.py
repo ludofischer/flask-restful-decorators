@@ -21,7 +21,7 @@ def _put(self, rule, **options):
 def _delete(self, rule, **options):
     return _route_for_method(self, rule, 'DELETE', **options)
 
-def init_restful_decorators(app):
+def add_restful_decorators(app):
     app = app
     app.get = types.MethodType(_get, app, flask.Flask)
     app.post = types.MethodType(_post, app, flask.Flask)
